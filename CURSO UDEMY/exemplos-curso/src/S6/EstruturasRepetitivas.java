@@ -21,6 +21,31 @@ public class EstruturasRepetitivas {
 
         System.out.println(sum);
 
+        //todo Estrutura for
+
+        int limit, n, soma = 0, i = 0;
+        System.out.println("Digite um limite para a soma:");
+        limit = Integer.parseInt(entrada.nextLine());
+
+        for (i = 0; i < limit; i++) {
+            System.out.println("Digite um número " + (i + 1) + " : ");
+            n = Integer.parseInt(entrada.nextLine());
+            soma += n;
+        }
+        System.out.println("O total de " + limit + " número(s), a soma deu: " + soma);
+
+        System.out.println("Incrementando");
+
+        for ( i = 0 ; i < 5; i++){
+            System.out.println("O valor de i: " + i);
+        }
+
+        System.out.println("Decrementando");
+
+        for ( i = 4 ; i >= 0; i--){
+            System.out.println("O valor de i: " + i);
+        }
+
     }
 
 }
