@@ -46,6 +46,34 @@ public class EstruturasRepetitivas {
             System.out.println("O valor de i: " + i);
         }
 
+        //todo while do
+
+        String resp;
+        double c,f;
+        System.out.println("Digite a temperatura em Celsius: ");
+        c = Double.parseDouble(entrada.nextLine());
+        f = 9.0 * c / 5.0 + 32.0;
+        System.out.printf("Equivalente em Fahrenheit: %.1f%n", f);
+        System.out.println("Deseja repetir a operação  (S/N)?");
+        resp = entrada.nextLine();
+        while (!resp.equals("N")){
+            System.out.println("Digite a temperatura em Celsius: ");
+            c = Double.parseDouble(entrada.nextLine());
+            f = 9.0 * c / 5.0 + 32.0;
+            System.out.printf("Equivalente em Fahrenheit: %.1f%n", f);
+            System.out.println("Deseja repetir a operação  (S/N)?");
+            resp = entrada.nextLine();
+        }
+
+        do {
+            System.out.println("Digite a temperatura em Celsius: ");
+            c = Double.parseDouble(entrada.nextLine());
+            f = 9.0 * c / 5.0 + 32.0;
+            System.out.printf("Equivalente em Fahrenheit: %.1f%n", f);
+            System.out.println("Deseja repetir a operação  (S/N)?");
+            resp = entrada.nextLine();
+        } while(!resp.equals("N"));
+
     }
 
 }
