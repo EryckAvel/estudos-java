@@ -1,4 +1,4 @@
-package S8.ex001.application;
+package S8.areatriangulo.application;
 
 import java.util.Scanner;
 

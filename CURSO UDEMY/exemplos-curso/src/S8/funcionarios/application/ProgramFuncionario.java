@@ -1,6 +1,6 @@
-package S8.ex003.application;
+package S8.funcionarios.application;
 
-import S8.ex003.entity.Funcionario;
+import S8.funcionarios.entity.Funcionario;
 
 import java.util.Scanner;
 

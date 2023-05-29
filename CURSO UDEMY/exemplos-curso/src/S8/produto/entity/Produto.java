@@ -1,6 +1,4 @@
-package S8.ex002.entity;
-
-import javax.xml.namespace.QName;
+package S8.produto.entity;
 
 public class Produto {
 
