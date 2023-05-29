@@ -1,7 +1,5 @@
 package S8.ex001.application;
 
-import S8.ex001.entidade.Triangulo;
-
 import java.util.Scanner;
 
 public class ApplicationEx001 {

@@ -1,4 +1,4 @@
-package S8.ex001.entidade;
+package S8.ex001.entity;
 
 public class Triangulo {
 
