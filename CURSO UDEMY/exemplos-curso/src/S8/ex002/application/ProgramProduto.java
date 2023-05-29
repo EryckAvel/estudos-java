@@ -4,7 +4,7 @@ import S8.ex002.entity.Produto;
 
 import java.util.Scanner;
 
-public class ProgramEx002 {
+public class ProgramProduto {
 
     private static Scanner entrada = new Scanner(System.in);
 

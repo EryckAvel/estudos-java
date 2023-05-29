@@ -2,7 +2,7 @@ package S8.ex001.application;
 
 import java.util.Scanner;
 
-public class ApplicationEx001 {
+public class ApplicationTrianguloArea {
 
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
