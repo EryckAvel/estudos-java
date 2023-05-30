@@ -1,4 +1,4 @@
-package S8.areatriangulo.entity;
+package S8.exercicio.areatriangulo.entity;
 
 public class Triangulo {
 

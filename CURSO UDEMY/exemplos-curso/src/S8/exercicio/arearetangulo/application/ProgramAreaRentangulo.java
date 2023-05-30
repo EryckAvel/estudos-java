@@ -1,6 +1,6 @@
-package S8.arearetangulo.application;
+package S8.exercicio.arearetangulo.application;
 
-import S8.arearetangulo.entity.Rentangulo;
+import S8.exercicio.arearetangulo.entity.Rentangulo;
 
 import java.util.Scanner;
 

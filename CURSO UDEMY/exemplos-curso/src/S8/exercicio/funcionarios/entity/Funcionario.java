@@ -1,4 +1,4 @@
-package S8.funcionarios.entity;
+package S8.exercicio.funcionarios.entity;
 
 public class Funcionario {
 

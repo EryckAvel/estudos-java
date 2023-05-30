@@ -1,4 +1,4 @@
-package S8.produto.entity;
+package S8.exercicio.produto.entity;
 
 public class Produto {
 

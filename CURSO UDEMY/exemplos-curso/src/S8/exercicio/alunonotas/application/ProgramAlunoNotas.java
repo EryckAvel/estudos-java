@@ -1,6 +1,6 @@
-package S8.alunonotas.application;
+package S8.exercicio.alunonotas.application;
 
-import S8.alunonotas.entity.AlunoNotas;
+import S8.exercicio.alunonotas.entity.AlunoNotas;
 
 import java.util.Scanner;
 

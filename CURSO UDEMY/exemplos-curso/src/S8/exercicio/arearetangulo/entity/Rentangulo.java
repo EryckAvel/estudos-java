@@ -1,4 +1,4 @@
-package S8.arearetangulo.entity;
+package S8.exercicio.arearetangulo.entity;
 
 public class Rentangulo {
 

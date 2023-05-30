@@ -1,6 +1,6 @@
-package S8.produto.application;
+package S8.exercicio.produto.application;
 
-import S8.produto.entity.Produto;
+import S8.exercicio.produto.entity.Produto;
 
 import java.util.Scanner;
 

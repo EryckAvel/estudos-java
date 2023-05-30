@@ -1,6 +1,6 @@
-package S8.funcionarios.application;
+package S8.exercicio.funcionarios.application;
 
-import S8.funcionarios.entity.Funcionario;
+import S8.exercicio.funcionarios.entity.Funcionario;
 
 import java.util.Scanner;
 

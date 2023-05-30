@@ -1,4 +1,4 @@
-package S8.alunonotas.entity;
+package S8.exercicio.alunonotas.entity;
 
 public class AlunoNotas {
 

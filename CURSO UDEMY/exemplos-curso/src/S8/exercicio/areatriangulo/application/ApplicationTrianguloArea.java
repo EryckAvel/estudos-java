@@ -1,4 +1,4 @@
-package S8.areatriangulo.application;
+package S8.exercicio.areatriangulo.application;
 
 import java.util.Scanner;
 
