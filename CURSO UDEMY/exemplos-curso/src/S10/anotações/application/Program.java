@@ -2,7 +2,10 @@ package S10.anotações.application;
 
 import S10.anotações.entity.Produto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Program {
 
@@ -69,10 +72,11 @@ public class Program {
                 System.out.println(obj);
                 int y = (int) obj;
                 System.out.println(y);
-                // todo O UNBOXIN E BOZIN E FEITO DE FORMA NATURAL E SEM A UTILIZAÇÃO DO CASTIN USANDO O WRAPPER QUE SÃO CLASSES EQUIVALENTES AOS TIPOS PRIMITIVOS
+                //TODO O UNBOXIN E BOZIN E FEITO DE FORMA NATURAL E SEM A UTILIZAÇÃO DO CASTIN USANDO O WRAPPER QUE SÃO CLASSES EQUIVALENTES AOS TIPOS PRIMITIVOS
                 Integer Z = 20;
                 break;
             case 5:
+                //TODO USANDO O FOREACH
                 String[] vect = new String[] {"Marta", "Alex", "Nicolas", "Duda"};
                 System.out.println("RESULTADO USANDO UM FOR NORMAL:");
                 for(i = 0; i < vect.length;i++){
@@ -83,6 +87,37 @@ public class Program {
                     System.out.println(nomes);
                 }
                 break;
+            case 6:
+                //TODO TRABALHANDO COM LISTA
+                List<String> lista = new ArrayList<>();
+
+                lista.add("Maria");
+                lista.add("Alex");
+                lista.add("Nicolas");
+                lista.add("Duda");
+                lista.add(2, "Eryck");
+
+
+                System.out.println(lista.size());
+
+                lista.remove("Nicolas");
+
+                lista.removeIf(s -> s.charAt(0) == 'M');
+
+                System.out.println("Pos remoção: " + lista.size());
+                System.out.println("Posição de Eryck na lista é: " + lista.indexOf("Eryck"));
+                for (String  list: lista){
+                    System.out.println(list);
+                }
+                System.out.println("-----------------------------");
+                List<String> resultado = lista.stream().filter(s -> s.charAt(0) == 'A').collect(Collectors.toList());
+                for (String  result: resultado){
+                    System.out.println(result);
+                }
+                System.out.println("-----------------------------");
+                String name = lista.stream().filter(s -> s.charAt(0) == 'A').findFirst().orElse(null);
+                System.out.println("Primerio nome que começa com A da lista é:" + name);
+
         }
 
     }
