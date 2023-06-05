@@ -5,7 +5,6 @@ import S10.anotações.entity.Produto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Program {
 
@@ -110,7 +109,7 @@ public class Program {
                     System.out.println(list);
                 }
                 System.out.println("-----------------------------");
-                List<String> resultado = lista.stream().filter(s -> s.charAt(0) == 'A').collect(Collectors.toList());
+                List<String> resultado = lista.stream().filter(s -> s.charAt(0) == 'A').toList();
                 for (String  result: resultado){
                     System.out.println(result);
                 }
@@ -118,6 +117,30 @@ public class Program {
                 String name = lista.stream().filter(s -> s.charAt(0) == 'A').findFirst().orElse(null);
                 System.out.println("Primerio nome que começa com A da lista é:" + name);
                 break;
+            case 7:
+                System.out.print("Digite o tamanho da matriz: ");
+                num = Integer.parseInt(entrada.nextLine());
+                int matriz[][] = new int[num][num];
+                for (i = 0; i < num; i++){
+                    System.out.println("Digite os valores da " + (1+i) + "a linha:");
+                    for (int f = 0; f < num; f++){
+                        matriz[i][f] = entrada.nextInt();
+                    }
+                }
+                System.out.print("Valores que estão na diagonal: ");
+                for (i = 0; i < num; i++){
+                    System.out.print(matriz[i][i] + " ");
+                }
+                System.out.println("");
+                int count = 0;
+                for (i = 0; i < num; i++){
+                    for (int f = 0; f < num; f++){
+                        if(matriz[i][f] < 0){
+                            count += 1;
+                        }
+                    }
+                }
+                System.out.println("Numeros Negativos: " + count);
         }
 
     }
