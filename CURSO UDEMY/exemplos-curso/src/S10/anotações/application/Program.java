@@ -117,7 +117,7 @@ public class Program {
                 System.out.println("-----------------------------");
                 String name = lista.stream().filter(s -> s.charAt(0) == 'A').findFirst().orElse(null);
                 System.out.println("Primerio nome que começa com A da lista é:" + name);
-
+                break;
         }
 
     }
