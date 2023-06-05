@@ -95,8 +95,6 @@ public class Program {
                 lista.add("Nicolas");
                 lista.add("Duda");
                 lista.add(2, "Eryck");
-
-
                 System.out.println(lista.size());
 
                 lista.remove("Nicolas");
