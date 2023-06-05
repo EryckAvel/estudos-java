@@ -118,6 +118,7 @@ public class Program {
                 System.out.println("Primerio nome que começa com A da lista é:" + name);
                 break;
             case 7:
+                //TODO TRABALHANDO COM VETORES
                 System.out.print("Digite o tamanho da matriz: ");
                 num = Integer.parseInt(entrada.nextLine());
                 int matriz[][] = new int[num][num];
@@ -141,6 +142,7 @@ public class Program {
                     }
                 }
                 System.out.println("Numeros Negativos: " + count);
+                break;
         }
 
     }
