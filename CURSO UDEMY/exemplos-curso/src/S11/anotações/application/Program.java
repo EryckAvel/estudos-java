@@ -94,6 +94,7 @@ public class Program {
                 System.out.println("ISO_DATE_TIME: " + dateTime.format(formatterIsoDateTime) + "\n");
                 System.out.println("ISO_INSTANT: " + formatterIsoInstant.format(instant));
                 System.out.println("\n--------------------------------\n");
+                break;
             case 3:
                 LocalDate dt01 = LocalDate.parse("2022-07-12");
                 LocalDateTime  dt02 = LocalDateTime.parse("2022-07-30T20:26");
@@ -121,6 +122,7 @@ public class Program {
                 System.out.println("Hora do dt02: " + dt02.getHour());
                 System.out.println("Minuto do dt02: " + dt02.getMinute());
                 System.out.println("\n--------------------------------\n");
+                break;
             case 4:
                 LocalDate dtDate = LocalDate.parse("2022-07-12");
                 LocalDateTime  dtTime = LocalDateTime.parse("2022-07-30T20:26");
@@ -147,6 +149,7 @@ public class Program {
                 System.out.println("Duração da semana passada com Horas para a semana seguinte: " + t1.toHours() + " horas!");
                 System.out.println("Duração da semana passada com Horas para a semana seguinte: " + t1.toMinutes() + " horas!");
                 System.out.println("\n--------------------------------\n");
+                break;
             case 5:
                 SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
                 SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -170,7 +173,9 @@ public class Program {
                 System.out.println(sdf2.format(y2));
                 System.out.println(sdf2.format(now));
                 System.out.println("\n--------------------------------\n");
-
+                break;
+            default:
+                System.out.println("Teste Não encontrado " + LocalDateTime.now());
         }
 
     }
