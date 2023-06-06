@@ -1,17 +1,18 @@
 package S11.anotações.application;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Program {
 
     private static Scanner entrada = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         System.out.print("Digite o Teste que deseja realizar:");
         int num = Integer.parseInt(entrada.nextLine());
@@ -20,7 +21,6 @@ public class Program {
                 //TODO FORMATADOR DE DATAS
                 DateTimeFormatter f1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 DateTimeFormatter f2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-
                 //TODO TRABALHANDO APENAS COM A DATA DO DIA ATUAL
                 LocalDate d01 = LocalDate.now();
                 //TODO TRABALHANDO COM DATA E HORARIO DO DIA E MOMENTO ATUAL
@@ -94,6 +94,83 @@ public class Program {
                 System.out.println("ISO_DATE_TIME: " + dateTime.format(formatterIsoDateTime) + "\n");
                 System.out.println("ISO_INSTANT: " + formatterIsoInstant.format(instant));
                 System.out.println("\n--------------------------------\n");
+            case 3:
+                LocalDate dt01 = LocalDate.parse("2022-07-12");
+                LocalDateTime  dt02 = LocalDateTime.parse("2022-07-30T20:26");
+                Instant dt03 = Instant.parse("2022-07-20T01:30:26Z");
+                System.out.println("--------------------------------\n");
+                LocalDate r1 = LocalDate.ofInstant(dt03, ZoneId.systemDefault());
+                System.out.println("Convetendo Data com Fuso Defautl:" + r1);
+                System.out.println("\n--------------------------------\n");
+                LocalDate r2 = LocalDate.ofInstant(dt03, ZoneId.of("Portugal"));
+                System.out.println("Convertendo Data para o Fuso de Portugal :" + r2);
+                System.out.println("\n--------------------------------\n");
+                LocalDateTime r3 = LocalDateTime.ofInstant(dt03, ZoneId.systemDefault());
+                System.out.println("Convertendo Data e Hora para Fuso Default:" + r3);
+                System.out.println("\n--------------------------------\n");
+                LocalDateTime r4 = LocalDateTime.ofInstant(dt03, ZoneId.of("Portugal"));
+                System.out.println("Convertendo Data e Hora para Fuso de Portugal:" + r4);
+                System.out.println("\n--------------------------------\n");
+                System.out.println("Dia do dt01: " + dt01.getDayOfMonth());
+                System.out.println("Mes do dt01: " + dt01.getMonthValue());
+                System.out.println("Ano do dt01: " + dt01.getYear());
+                System.out.println("\n--------------------------------\n");
+                System.out.println("Dia do dt02: " + dt02.getDayOfMonth());
+                System.out.println("Mes do dt02: " + dt02.getMonthValue());
+                System.out.println("Ano do dt02: " + dt02.getYear());
+                System.out.println("Hora do dt02: " + dt02.getHour());
+                System.out.println("Minuto do dt02: " + dt02.getMinute());
+                System.out.println("\n--------------------------------\n");
+            case 4:
+                LocalDate dtDate = LocalDate.parse("2022-07-12");
+                LocalDateTime  dtTime = LocalDateTime.parse("2022-07-30T20:26");
+                Instant dtInstant = Instant.parse("2022-07-20T01:30:26Z");
+
+                System.out.println("--------------------------------\n");
+                LocalDate pastWeekLD = dtDate.minusDays(7);
+                LocalDate nextWeekLD = dtDate.plusDays(7);
+                System.out.println("Dia da semana anterior: " + pastWeekLD);
+                System.out.println("Dia da semana seguinte: " + nextWeekLD);
+                System.out.println("\n--------------------------------\n");
+                LocalDateTime pastWeekLDT = dtTime.minusDays(7);
+                LocalDateTime nextWeekLDT = dtTime.plusDays(7);
+                System.out.println("Dia da semana anterior com Hora: " + pastWeekLDT);
+                System.out.println("Dia da semana seguinte com Hora: " + nextWeekLDT);
+                System.out.println("\n--------------------------------\n");
+                Instant pastWeekIns = dtInstant.minus(7, ChronoUnit.DAYS);
+                Instant nextWeekIns = dtInstant.plus(7, ChronoUnit.DAYS);
+                System.out.println("Dia da semana anterior com Hora e Fuso: " + pastWeekIns);
+                System.out.println("Dia da semana seguinte com Hora e Fuso: " + nextWeekIns);
+                System.out.println("\n--------------------------------\n");
+                Duration t1 = Duration.between(pastWeekLDT, nextWeekLDT);
+                System.out.println("Duração da semana passada com Horas para a semana seguinte: " + t1.toDays() + " dias!");
+                System.out.println("Duração da semana passada com Horas para a semana seguinte: " + t1.toHours() + " horas!");
+                System.out.println("Duração da semana passada com Horas para a semana seguinte: " + t1.toMinutes() + " horas!");
+                System.out.println("\n--------------------------------\n");
+            case 5:
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                Date y1 = sdf1.parse("25/03/2003");
+                Date y2 = sdf2.parse("25/03/2003 23:30:10");
+                Date now = new Date();
+
+                System.out.println("--------------------------------\n");
+                System.out.println("Formato Normal do Date: \n");
+                System.out.println(y1);
+                System.out.println(y2);
+                System.out.println(now);
+                System.out.println("\n--------------------------------\n");
+                System.out.println("Formato de apenas Data: \n");
+                System.out.println(sdf1.format(y1));
+                System.out.println(sdf1.format(y2));
+                System.out.println(sdf1.format(now));
+                System.out.println("\n--------------------------------\n");
+                System.out.println("Formato de apenas Data e Hora: \n");
+                System.out.println(sdf2.format(y1));
+                System.out.println(sdf2.format(y2));
+                System.out.println(sdf2.format(now));
+                System.out.println("\n--------------------------------\n");
+
         }
 
     }
