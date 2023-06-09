@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -174,10 +175,44 @@ public class Program {
                 System.out.println(sdf2.format(now));
                 System.out.println("\n--------------------------------\n");
                 break;
+            case 6:
+                System.out.println("--------------------------------\n");
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                Date d = Date.from(Instant.parse("2020-06-20T15:42:07Z"));
+                System.out.println(sdf.format(d));
+                System.out.println("\n--------------------------------\n");
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(d);
+                cal.add(Calendar.HOUR_OF_DAY, 1);
+                d = cal.getTime();
+                System.out.println(sdf.format(d));
+                System.out.println("\n--------------------------------\n");
+                cal.setTime(Date.from(Instant.now()));
+                System.out.println("Ano: " + cal.get(Calendar.YEAR));
+                System.out.println("Mes: " + obterNomeMes(cal.get(Calendar.MONTH)));
+                System.out.println("Dia: " + cal.get(Calendar.DAY_OF_MONTH));
+                System.out.println("Dia da Semana : " + obterNomeDiaSemana(cal.get(Calendar.DAY_OF_WEEK)));
+                System.out.println(cal.get(Calendar.HOUR_OF_DAY) + " Horas");
+                System.out.println(cal.get(Calendar.MINUTE) + " Minutos");
+                System.out.println(cal.get(Calendar.SECOND) + " Segundos");
+                System.out.println("\n--------------------------------\n");
+                break;
             default:
                 System.out.println("Teste Não encontrado " + LocalDateTime.now());
         }
 
+    }
+
+    public static String obterNomeMes(int mes)
+    {
+        String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        return meses[mes];
+    }
+
+    public static String obterNomeDiaSemana(int dia)
+    {
+        String[] diaSemana = {"Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado"};
+        return diaSemana[dia-1];
     }
 
 }
