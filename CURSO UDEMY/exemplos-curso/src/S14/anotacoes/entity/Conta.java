@@ -2,8 +2,8 @@ package S14.anotacoes.entity;
 
 public class Conta {
 
-    private Integer numero;
-    private String titular;
+    protected Integer numero;
+    protected String titular;
     protected Double saldo;
 
     public Conta() {
@@ -40,11 +40,19 @@ public class Conta {
     }
 
     public void saque(Double valor){
-        saldo -= valor;
+        saldo -= valor+5;
     }
 
     public void deposito(Double valor){
         saldo += valor;
     }
 
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "numero=" + numero +
+                ", titular='" + titular + '\'' +
+                ", saldo=" + saldo +
+                '}';
+    }
 }

@@ -20,10 +20,29 @@ public class ContaEmpresarial extends Conta{
         this.limiteEmprestimo = limiteEmprestimo;
     }
 
+
+    //todo utilizamos o super para chamar dados da classe superior extendida
+    //todo No exemplo a seguir estamos aproveirando ja o metodo de saque da classe conta que estamos extendendo
+    @Override
+    public void saque(Double valor) {
+        super.saque(valor);
+        saldo -= 2.0;
+    }
+
     public void emprestimo(Double valor){
         if (valor <= limiteEmprestimo) {
             saldo = valor - 10;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ContaEmpresarial{" +
+                "limiteEmprestimo=" + limiteEmprestimo +
+                ", numero=" + numero +
+                ", titular='" + titular + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 
 }
