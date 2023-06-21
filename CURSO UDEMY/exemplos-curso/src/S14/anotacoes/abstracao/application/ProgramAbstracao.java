@@ -1,8 +1,8 @@
-package S14.anotacoes.abstracao.conta.application;
+package S14.anotacoes.abstracao.application;
 
-import S14.anotacoes.abstracao.conta.entity.Conta;
-import S14.anotacoes.abstracao.conta.entity.ContaEmpresarial;
-import S14.anotacoes.abstracao.conta.entity.ContaPoupanca;
+import S14.anotacoes.abstracao.entity.Conta;
+import S14.anotacoes.abstracao.entity.ContaEmpresarial;
+import S14.anotacoes.abstracao.entity.ContaPoupanca;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package S14.anotacoes.abstracao.conta.entity;
+package S14.anotacoes.abstracao.entity;
 
 public abstract class Conta {
 
