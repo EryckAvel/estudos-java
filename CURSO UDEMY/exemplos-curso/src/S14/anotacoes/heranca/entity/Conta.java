@@ -1,4 +1,4 @@
-package S14.anotacoes.entity;
+package S14.anotacoes.heranca.entity;
 
 public class Conta {
 

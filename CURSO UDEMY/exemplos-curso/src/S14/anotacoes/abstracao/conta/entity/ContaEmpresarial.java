@@ -1,4 +1,4 @@
-package S14.anotacoes.entity;
+package S14.anotacoes.abstracao.conta.entity;
 
 public class ContaEmpresarial extends Conta{
 

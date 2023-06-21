@@ -1,8 +1,8 @@
-package S14.anotacoes.application;
+package S14.anotacoes.heranca.application;
 
-import S14.anotacoes.entity.Conta;
-import S14.anotacoes.entity.ContaEmpresarial;
-import S14.anotacoes.entity.ContaPoupanca;
+import S14.anotacoes.heranca.entity.Conta;
+import S14.anotacoes.heranca.entity.ContaEmpresarial;
+import S14.anotacoes.heranca.entity.ContaPoupanca;
 
 public class Program {
 
