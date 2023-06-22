@@ -54,6 +54,18 @@ public class Reserva {
         this.checkout = checkout;
     }
 
+    public String atualizarDatasV2(LocalDate checkin, LocalDate checkout){
+        LocalDate agora = LocalDate.now();
+        if (checkin.isBefore(agora) || checkout.isBefore(agora)){
+            return "Erro em fazer a reserva: Data de checkout e checkin devem ser futuras!";
+        }if (!checkout.isAfter(checkin)){
+            return "Erro em fazer a reserva: Data de checkout invalida!";
+        }
+        this.checkin = checkin;
+        this.checkout = checkout;
+        return null;
+    }
+
     @Override
     public String toString() {
         return "\nReserva:" +

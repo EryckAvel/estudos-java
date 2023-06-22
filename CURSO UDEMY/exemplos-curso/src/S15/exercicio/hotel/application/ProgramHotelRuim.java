@@ -35,17 +35,14 @@ public class ProgramHotelRuim {
             System.out.print("Check-out: ");
             checkout = LocalDate.from(formatterDate.parse(entrada.nextLine()));
 
-
-            LocalDate agora = LocalDate.now();
-            if (checkin.isBefore(agora) || checkout.isBefore(agora)){
-                System.out.println("Erro em fazer a reserva: Data de checkout e checkin devem ser futuras!");
-            }else if (!checkout.isAfter(checkin)){
-                System.out.println("Erro em fazer a reserva: Data de checkout invalida!");
-            } else{
-                reserva.atualizarDatas(checkin, checkout);
+            String error = reserva.atualizarDatasV2(checkin, checkout);
+            if (error != null){
+                System.out.println(error);
+            }else {
                 System.out.println("\n-------------- ATUALIZACAO --------------");
                 System.out.println(reserva);
             }
+
         }
     }
 
