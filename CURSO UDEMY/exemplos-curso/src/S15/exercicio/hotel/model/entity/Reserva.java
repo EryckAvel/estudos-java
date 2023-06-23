@@ -1,5 +1,7 @@
 package S15.exercicio.hotel.model.entity;
 
+import S15.exercicio.hotel.model.exception.DomainException;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -14,11 +16,15 @@ public class Reserva {
     public Reserva() {
     }
 
-    public Reserva(Integer numeroQuarto, LocalDate checkin, LocalDate checkout) {
+    public Reserva(Integer numeroQuarto, LocalDate checkin, LocalDate checkout) throws DomainException {
+        if (!checkout.isAfter(checkin)){
+            throw new DomainException("Data de checkout invalida!");
+        }
         this.numeroQuarto = numeroQuarto;
         this.checkin = checkin;
         this.checkout = checkout;
     }
+
 
     public Integer getNumeroQuarto() {
         return numeroQuarto;
@@ -64,6 +70,17 @@ public class Reserva {
         this.checkin = checkin;
         this.checkout = checkout;
         return null;
+    }
+
+    public void atualizarDatasV3(LocalDate checkin, LocalDate checkout) throws DomainException {
+        LocalDate agora = LocalDate.now();
+        if (checkin.isBefore(agora) || checkout.isBefore(agora)){
+            throw new DomainException("Data de checkout e checkin devem ser futuras!");
+        }if (!checkout.isAfter(checkin)){
+            throw new DomainException("Data de checkout invalida!");
+        }
+        this.checkin = checkin;
+        this.checkout = checkout;
     }
 
     @Override

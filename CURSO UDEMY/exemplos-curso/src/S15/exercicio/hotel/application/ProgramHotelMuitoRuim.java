@@ -1,6 +1,7 @@
 package S15.exercicio.hotel.application;
 
 import S15.exercicio.hotel.model.entity.Reserva;
+import S15.exercicio.hotel.model.exception.DomainException;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,7 +11,7 @@ public class ProgramHotelMuitoRuim {
 
     static Scanner entrada = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DomainException {
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Reserva reserva;
 
