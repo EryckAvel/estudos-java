@@ -1,4 +1,4 @@
-package XadrexDesafio.model.tabuleiro;
+package S16D.model.tabuleiro;
 
 public class Posicao {
 

@@ -1,6 +1,7 @@
-package XadrexDesafio.application;
+package S16D.application;
 
-import XadrexDesafio.model.tabuleiro.Tabuleiro;
+import S16D.model.tabuleiro.Posicao;
+import S16D.model.tabuleiro.Tabuleiro;
 
 public class ProgramXadrez {
 

@@ -1,7 +1,6 @@
 package S6.exercicios;
 
 import java.util.Scanner;
-import javax.sound.midi.Soundbank;
 
 public class EstruturaWhileEx {
 
