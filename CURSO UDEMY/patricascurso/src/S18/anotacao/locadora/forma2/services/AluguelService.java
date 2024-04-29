@@ -10,9 +10,9 @@ public class AluguelService {
     private double precoPorHora;
     private double precoPorDia;
 
-    private TaxaBrazileiraService taxa;
+    private TaxaService taxa;
 
-    public AluguelService(double precoPorHora, double precoPorDia, TaxaBrazileiraService taxa) {
+    public AluguelService(double precoPorHora, double precoPorDia, TaxaService taxa) {
         this.precoPorHora = precoPorHora;
         this.precoPorDia = precoPorDia;
         this.taxa = taxa;
@@ -47,11 +47,11 @@ public class AluguelService {
         this.precoPorDia = precoPorDia;
     }
 
-    public TaxaBrazileiraService getTaxa() {
+    public TaxaService getTaxa() {
         return taxa;
     }
 
-    public void setTaxa(TaxaBrazileiraService taxa) {
+    public void setTaxa(TaxaService taxa) {
         this.taxa = taxa;
     }
 }

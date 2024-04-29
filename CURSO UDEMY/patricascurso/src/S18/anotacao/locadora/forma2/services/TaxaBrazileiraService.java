@@ -1,7 +1,8 @@
 package S18.anotacao.locadora.forma2.services;
 
-public class TaxaBrazileiraService {
+public class TaxaBrazileiraService implements TaxaService{
 
+    @Override
     public double taxa(double montante){
         if (montante <= 100.0){
             return montante * 0.2;
