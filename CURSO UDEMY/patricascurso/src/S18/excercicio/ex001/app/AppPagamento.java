@@ -3,11 +3,9 @@ package S18.excercicio.ex001.app;
 import S18.excercicio.ex001.model.Contrato;
 import S18.excercicio.ex001.model.Parcela;
 import S18.excercicio.ex001.service.ContratoService;
-import S18.excercicio.ex001.service.PayPalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Scanner;
 import static java.time.LocalDate.parse;
 
