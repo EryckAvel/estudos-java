@@ -342,3 +342,11 @@ e
 5src/S18/anotacao/motivador/app/ProgramMotivador2.java,e\f\ef59a1df084c0c7ff6cde65b604c85b6c5fc3d21
 a
 1src/S18/anotacao/motivador/model/Funcionario.java,d\a\daf8071a71a85dd3ae52099b0c579223d3a97581
+i
+9src/S18/anotacao/emprestimo/app/EmprestimoAplication.java,8\8\88ff6285ce8c08468fb40ead7ef6532a3ffb6946
+k
+;src/S18/anotacao/emprestimo/service/JurosBrazilService.java,7\6\76bfda9b3c6e280434bd20a0324e098360b6e335
+h
+8src/S18/anotacao/emprestimo/service/JurosUsaService.java,9\2\927da8df96c5b01e0757bd60388639236884eea7
+e
+5src/S18/anotacao/emprestimo/service/JurosService.java,4\1\414071f1d0245fb96b761489b1668a1df35bbf8f
