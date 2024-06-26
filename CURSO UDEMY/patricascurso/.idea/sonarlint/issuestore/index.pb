@@ -350,3 +350,5 @@ h
 8src/S18/anotacao/emprestimo/service/JurosUsaService.java,9\2\927da8df96c5b01e0757bd60388639236884eea7
 e
 5src/S18/anotacao/emprestimo/service/JurosService.java,4\1\414071f1d0245fb96b761489b1668a1df35bbf8f
+^
+.src/S19/notes/motivador1/app/AppImpressao.java,d\1\d188349fd5016f7ebc150c161011fe935230a244
